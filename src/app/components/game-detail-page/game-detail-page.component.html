@@ -1,0 +1,32 @@
+<div *ngIf="game">
+    <div class="gamePanel">
+        <img class="gameImg"src={{game.thumbnail}} alt="">
+        <h1 class="gameTitle">{{game.title}}
+            <button class="buttonFavorite">adicionar aos favoritos</button>
+        </h1>
+        <h3> </h3>
+        <div class= "gameDescription">{{game.description}} </div>
+        
+        <h2>Publisher:</h2>
+        <div class= "gamePublisher">{{game.publisher}}</div>
+        <h2>Platform:</h2>
+        <div class="gamePlatform">{{game.platform}}</div>
+        <h2>Release Date:</h2>
+        <div class="gameRealease">{{game.release_date}}</div>
+        <h2>Requirements:</h2>
+        <div class="gameRequirements">
+            <div> graphics: {{game.minimum_system_requirements.graphics}}</div>
+            <div> memory: {{game.minimum_system_requirements.memory}}</div>
+            <div> OS: {{game.minimum_system_requirements.os}}</div>
+            <div> processor: {{game.minimum_system_requirements.processor}}</div>
+            <div> storage: {{game.minimum_system_requirements.storage}}</div>
+        </div>
+        <h1>Screenshots:</h1>
+        <div class="gameScreenshots">
+            <li *ngFor="let sc of game.screenshots">
+                <img src="{{sc.image}}" alt="">
+            </li>
+        </div>
+
+    </div>
+</div>

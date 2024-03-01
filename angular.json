@@ -24,6 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            
             "outputPath": "dist/selecao-vlab",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -37,6 +38,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -97,6 +99,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -104,5 +107,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3edb3ba3-767a-4724-9eaa-8fa6c99d4525"
   }
 }
