@@ -6,7 +6,7 @@ All User stories were implemented without bugs.
 
 ## Eu, como usuário, desejo entrar no site e ver uma lista de jogos para poder explorar todos os jogos.
 
-![](file:///C:/Users/gab_f/Downloads/feat1-ezgif.com-video-to-gif-converter.gif)
+![](https://github.com/gabriel-ferreira-da-silva/FreeGameSearcher/blob/main/videos/feat1.gif)
 
 # feature 2
 
@@ -14,7 +14,7 @@ All User stories were implemented without bugs.
 
 
 
-![](C:/Users/gab_f/Downloads/feat2-ezgif.com-video-to-gif-converter.gif)
+![](https://github.com/gabriel-ferreira-da-silva/FreeGameSearcher/blob/main/videos/feat2.gif)
 
 # feature 3
 
@@ -22,13 +22,13 @@ All User stories were implemented without bugs.
 
 
 
-![](file:///C:/Users/gab_f/Downloads/feat3-ezgif.com-video-to-gif-converter.gif)
+![](https://github.com/gabriel-ferreira-da-silva/FreeGameSearcher/blob/main/videos/feat3.gif)
 
 # feature 4
 
 ## Eu, como usuário, desejo poder salvar um jogo como favorito para poder ter um acesso rápido de quais jogos gostei mais.
 
-![](file:///C:/Users/gab_f/Downloads/feat4-ezgif.com-video-to-gif-converter.gif)
+![](https://github.com/gabriel-ferreira-da-silva/FreeGameSearcher/blob/main/videos/feat4.gif)
 
 # feature 5
 
@@ -36,4 +36,4 @@ All User stories were implemented without bugs.
 
 
 
-![](file:///C:/Users/gab_f/Downloads/feat5.gif)
+![](https://github.com/gabriel-ferreira-da-silva/FreeGameSearcher/blob/main/videos/feat5.gif)
