@@ -1,6 +1,10 @@
 # SelecaoVlab
 
-All User stories were implemented without bugs.
+The project was developed following the selection specifications [here](https://docs.google.com/document/d/1xh2g5AmTCCMetQWCTII8vbRC_8re6qdpYFARGMpRjIA/edit). All User stories were implementend without bugs or crash a should run smoothly on any machine with windows and angular installed. The freeGame API was used as specified and sugested by the creators. Some screenshots of the working project feature are presented bellow.
+
+to run the project go to /src  and type in terminal:
+
+`ng serve ---port 4200`
 
 # feature 1
 
