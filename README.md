@@ -2,8 +2,10 @@
 
 The project was developed following the selection specifications [here](https://docs.google.com/document/d/1xh2g5AmTCCMetQWCTII8vbRC_8re6qdpYFARGMpRjIA/edit). All User stories were implementend without bugs or crash and should run smoothly on any machine with windows and angular installed. The freeGame API was used as specified and sugested by the creators. Some screenshots of the working project features are presented bellow.
 
-to run the project go to /src  and type in terminal:
+to run the project go to   and type in terminal:
 
+`cd proxy`
+`node server.js`
 `ng serve ---port 4200`
 
 # feature 1
