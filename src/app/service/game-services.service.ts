@@ -16,17 +16,11 @@ export class GameServicesService {
   
   getAllGames(){
     const req = this.http.get<Game[]>(this.url+"games");
-    
     return req;
   }
 
   getGame(gameid:number){
-    const req= this.http.get<GameLong>(this.url+"game/516");
-    console.log("morra demonio")
-    req.subscribe(data =>{
-      console.log("morra demonion");
-      console.log(data);
-    })
+    const req= this.http.get<GameLong>(this.url+"game/"+gameid);
     return req;
   }
 

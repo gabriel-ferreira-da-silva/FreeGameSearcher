@@ -11,7 +11,7 @@ import { GameStorageService } from '../../service/game-storage.service';
 })
 export class GameDetailPageComponent {
   
-  game?: Game;/*= {
+  game?: GameLong;/*= {
     id: 0,
     title: "string",
     thumbnail: "string",
