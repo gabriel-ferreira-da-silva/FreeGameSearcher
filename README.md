@@ -4,9 +4,13 @@ The project was developed following the selection specifications [here](https://
 
 to run the project go to   and type in terminal:
 
-`cd proxy`
-`node server.js`
-`ng serve ---port 4200`
+```
+cd proxy
+
+node server.js`
+
+ng serve ---port 4200
+```
 
 # feature 1
 
