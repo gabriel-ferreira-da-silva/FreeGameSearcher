@@ -25,19 +25,25 @@ export class GameDetailPageComponent {
     freetogame_profile_url: "string;",
   }*/
   favGames: Game[]=[];
+  allFavGames: Game[]=[];
 
-  
-  favoriteGame(game: Game){
-    const n = this.storageService.get("1");
-    this.favGames = JSON.parse(n);
-    this.favGames.push(game);
-    this.storageService.set("1", JSON.stringify(this.favGames));
-    console.log(this.favGames)
+  favoriteGame(game:Game){
+    this.allFavGames.push(game);
+    this.favGames = this.allFavGames;
+    this.storage.set(this.allFavGames);
     alert(game.title + " added to favorites!");
   }
 
+  unfavoriteGame(game:Game){
+    const index = this.favGames.indexOf(game,0);
+    this.favGames.splice(index,1);
+    this.allFavGames=this.favGames;
+    this.storage.set(this.allFavGames);
+    alert(game.title + " removed from favorites!");
+  }
+
   gameList: Game[]=[];
-  constructor(private storageService: GameStorageService ,private gameService: GameServicesService,private route: ActivatedRoute, private router: Router){
+  constructor(private storage: GameStorageService ,private gameService: GameServicesService,private route: ActivatedRoute, private router: Router){
     this.getGame();
   }
 

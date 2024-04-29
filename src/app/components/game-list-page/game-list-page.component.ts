@@ -45,27 +45,6 @@ export class GameListPageComponent {
   categoryFilter : string="";
   developerFilter : string=""; 
 
-  favoriteGame(game: Game){
-    const n = this.storageService.get("1");
-    this.favGames = JSON.parse(n);
-    this.favGames.push(game);
-    this.allFavGames = this.favGames;
-    this.storageService.set("1", JSON.stringify(this.favGames));
-    console.log(this.favGames)
-    alert(game.title + " added to favorites!");
-  }
-
-  unfavoriteGame(game: Game){
-    const n = this.storageService.get("1");
-    this.favGames = JSON.parse(n);
-    const index = this.favGames.indexOf(game, 0);
-    this.favGames.splice(index,1);
-    this.allFavGames = this.favGames;
-    this.storageService.set("1", JSON.stringify(this.favGames));
-    console.log(this.favGames)
-    alert(game.title + " removed from favorites!");
-  }
-
   onSelect(op: string){
     console.log(op);
     if(op=="title"){
@@ -174,28 +153,38 @@ export class GameListPageComponent {
     }
   }
 
+  favoriteGame(game:Game){
+    this.allFavGames.push(game);
+    this.favGames = this.allFavGames;
+    this.storage.set(this.allFavGames);
+    alert(game.title + " added to favorites!");
+  }
+
+  unfavoriteGame(game:Game){
+    const index = this.favGames.indexOf(game,0);
+    this.favGames.splice(index,1);
+    this.allFavGames=this.favGames;
+    this.storage.set(this.allFavGames);
+    alert(game.title + " removed from favorites!");
+  }
 
   gameList: Game[]=[this.nullGame];
   allGames: Game[]=[this.nullGame];
 
-  constructor(private http:HttpClient, private storageService: GameStorageService, private gameService: GameServicesService){
+  constructor(private storage: GameStorageService, private http:HttpClient , private gameService: GameServicesService){
     this.apiURL = "http://localhost:4123/http://www.freetogame.com/api/games";
   }
 
-  ngOnInit(): void{
-    
-    /*const n = this.storageService.get("1");
-    this.favGames = JSON.parse(n);
-    this.allFavGames = this.favGames;
-    console.log(this.favGames);
-    */
+  ngOnInit(): void{  
 
+    this.allFavGames = this.storage.get();
+    this.favGames = this.allFavGames;
+    
+    console.log(this.allFavGames);
     this.gameService.getAllGames().subscribe(data => {
       this.gameList = data;
       this.allGames = this.gameList;
-
-
     });
-    
   }
+
 }

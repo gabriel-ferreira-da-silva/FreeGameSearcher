@@ -4,23 +4,30 @@ import { Game } from '../../game';
   providedIn: 'root'
 })
 export class GameStorageService {
-  private storage :Storage;
+  private storage: Storage;
   constructor() {
     this.storage = window.localStorage;
   }
 
-  set(key:string, value: string){
-    this.storage.setItem(key,value);
-  }
-
-  get(key:string): string{
-    const r = this.storage.getItem(key);
-    if(r ==null){
-      return "";
-    }else{
-      return r;
+  set( games: any){
+    if(this.storage){
+      this.storage.setItem("games", JSON.stringify(games));
+      return true;
     }
+    return false;
+  }
+  
+  get(){
+    if(this.storage){
+      const r = this.storage.getItem("games");
+      return JSON.parse(r? r: "[]");
+
+    }
+    return [];
   }
 
-
+  clear(){
+    this.storage.clear();
+  }
+  
 }
