@@ -6,9 +6,9 @@ to run the project go to   and type in terminal:
 
 ```
 cd proxy
-
-node server.js`
-
+node server.js
+cd ..
+cd /src
 ng serve ---port 4200
 ```
 
