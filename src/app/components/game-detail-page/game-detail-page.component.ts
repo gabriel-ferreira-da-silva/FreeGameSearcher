@@ -11,7 +11,7 @@ import { GameStorageService } from '../../service/game-storage.service';
 })
 export class GameDetailPageComponent {
   
-  game?: GameLong;/*= {
+  game?: Game;/*= {
     id: 0,
     title: "string",
     thumbnail: "string",
@@ -49,10 +49,8 @@ export class GameDetailPageComponent {
     const id = Number(this.route.snapshot.paramMap.get("id"))
     this.gameService.getGame(id).subscribe(data => {
       this.game= data;
-      //console.log(data);
+      console.log(data);
     });
-
-    console.log(this.game);
   }
 
 }

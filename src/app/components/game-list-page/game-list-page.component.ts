@@ -102,11 +102,8 @@ export class GameListPageComponent {
         }else{
           return -1;
         }
-      });
-      
+      }); 
     }
-
-
   }
   
   filterGames(){
@@ -196,9 +193,7 @@ export class GameListPageComponent {
     this.gameService.getAllGames().subscribe(data => {
       this.gameList = data;
       this.allGames = this.gameList;
-      console.log("-------------------------my data is:");
-      console.log(data);
-      console.log("-------------------------my data is:");
+
 
     });
     
