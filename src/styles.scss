@@ -67,9 +67,17 @@ h1{
     margin:0;
     border: 1px;
     padding: 1px;
+
+    height:80%;
+    width: 90%;
+    
 }
 .listgames{
-    display: flexbox;
+    /*display: flexbox;*/
+    display: inline-block;
+}
+.listfav{
+    display: inline-block;
 }
 
 

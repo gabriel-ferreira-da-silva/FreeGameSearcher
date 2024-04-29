@@ -21,7 +21,6 @@ export class GameStorageService {
     if(this.storage){
       const r = this.storage.getItem("games");
       return JSON.parse(r? r: "[]");
-
     }
     return [];
   }
