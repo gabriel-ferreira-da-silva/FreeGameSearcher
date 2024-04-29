@@ -1,16 +1,35 @@
 var host1 = "http://localhost:4123/https://www.freetogame.com/api/games";
+var host ="localhost";
 var port = 4123;
 
-var cors_proxy = require('cors');
 const express = require('express');
+const cors = require('cors');
+const axios = require('axios');
+const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
 
 
-cors_proxy.createServer({
-    originWhitelist: [], // Allow all origins
-    requireHeader: ['origin', 'x-requested-with'],
-    removeHeaders: ['cookie', 'cookie2']
-}).listen(port, host, function() {
+app.get('/games', async (req, res) => {
+    try {
+      const response = await axios.get('https://www.freetogame.com/api/games');
+      res.json(response.data);
+      
+    } catch (error) {
+      console.log(error);
+      res.write(error);
+      res.status(500).json({ error: 'An error occurred while fetching data from the external API' });
+    }
+
+    res.end();
+  });
+
+
+app.listen(port, host, function() {
     console.log('Running CORS Anywhere on ' + host + ':' + port);
 });
 
-app.get()
+app.get('/', ()=>{
+    console.log("hello");
+});

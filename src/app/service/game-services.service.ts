@@ -10,29 +10,20 @@ import { Observable } from 'rxjs';
 })
 export class GameServicesService {
 
-  constructor(private http: HttpClient) { }
-
-  getAllGames():Observable<Game[]>{
-    var headers = new HttpHeaders({
-      'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
-      'x-rapidapi-key': '4d7047e447mshb4eb170f47a3a8ep1f91bejsn6f5328071e08'
-    });
-
-    return this.http.get<Game[]>('https://free-to-play-games-database.p.rapidapi.com/api/games', {
-        headers: headers
-      });
+  constructor(private http: HttpClient) { 
+  }
+  url:string =  "http://localhost:4123/games";
+  
+  getAllGames(){
+    const req = this.http.get<Game[]>(this.url);
+    req.subscribe(data =>{
+      console.log(data);
+    })
+    return req;
   }
 
-  getGame(id:number):Observable<GameLong>{
-    var headers = new HttpHeaders({
-      'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
-      'x-rapidapi-key': '4d7047e447mshb4eb170f47a3a8ep1f91bejsn6f5328071e08'
-    });
-    var link = "https://free-to-play-games-database.p.rapidapi.com/api/game?id=" + String(id);
-    console.log(link);
-    return this.http.get<GameLong>(link, {
-        headers: headers
-      });
+  getGame(id:string){
+    return this.http.get<Game[]>(this.url+'/'+id);;
   }
 
 }

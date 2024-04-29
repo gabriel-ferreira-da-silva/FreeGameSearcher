@@ -1,0 +1,1 @@
+console.log("\n\ndigite a senha do seu cartão:\n\ne os 3 numeros atras:\n")

@@ -47,10 +47,10 @@ export class GameDetailPageComponent {
 
   getGame(){
     const id = Number(this.route.snapshot.paramMap.get("id"))
-    this.gameService.getGame(id).subscribe(data => {
+    /*this.gameService.getGame(id).subscribe(data => {
       this.game= data;
       //console.log(data);
-    });
+    });*/
 
     console.log(this.game);
   }

@@ -187,16 +187,20 @@ export class GameListPageComponent {
 
   ngOnInit(): void{
     
-    const n = this.storageService.get("1");
+    /*const n = this.storageService.get("1");
     this.favGames = JSON.parse(n);
     this.allFavGames = this.favGames;
-
     console.log(this.favGames);
+    */
 
     this.gameService.getAllGames().subscribe(data => {
       this.gameList = data;
       this.allGames = this.gameList;
-      //console.log(data);
+      console.log("-------------------------my data is:");
+      console.log(data);
+      console.log("-------------------------my data is:");
+
     });
+    
   }
 }
