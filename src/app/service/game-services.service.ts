@@ -12,18 +12,18 @@ export class GameServicesService {
 
   constructor(private http: HttpClient) { 
   }
-  url:string =  "http://localhost:4123/games";
+  url:string =  "http://localhost:4123/";
   
   getAllGames(){
-    const req = this.http.get<Game[]>(this.url);
+    const req = this.http.get<Game[]>(this.url+"games");
     req.subscribe(data =>{
       console.log(data);
     })
     return req;
   }
 
-  getGame(id:string){
-    return this.http.get<Game[]>(this.url+'/'+id);;
+  getGame(gameid:number){
+    return this.http.get<Game>(this.url+'game/'+ String(gameid));;
   }
 
 }

@@ -21,7 +21,20 @@ app.get('/games', async (req, res) => {
       res.write(error);
       res.status(500).json({ error: 'An error occurred while fetching data from the external API' });
     }
+    res.end();
+  });
 
+  app.get('/game/:id', async (req, res) => {
+    try {
+      const gameId = req.params.id;
+      const response = await axios.get('https://www.freetogame.com/api/game?id='+gameId);
+      res.json(response.data);
+      
+    } catch (error) {
+      console.log(error);
+      res.write(error);
+      res.status(500).json({ error: 'An error occurred while fetching data from the external API' });
+    }
     res.end();
   });
 
