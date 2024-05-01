@@ -157,7 +157,7 @@ export class GameListPageComponent {
     this.allFavGames.push(game);
     this.favGames = this.allFavGames;
     this.storage.set(this.allFavGames);
-    alert(game.title + " added to favorites!");
+    //alert(game.title + " added to favorites!");
   }
 
   unfavoriteGame(game:Game){
@@ -165,7 +165,7 @@ export class GameListPageComponent {
     this.favGames.splice(index,1);
     this.allFavGames=this.favGames;
     this.storage.set(this.allFavGames);
-    alert(game.title + " removed from favorites!");
+    //alert(game.title + " removed from favorites!");
   }
 
   gameList: Game[]=[this.nullGame];
