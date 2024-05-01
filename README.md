@@ -12,6 +12,20 @@ cd /src
 ng serve ---port 4200
 ```
 
+the tests where implemented with pytest and selenium. to run the tests go to tests directory and run pytest in terminal as:
+
+```
+cd tests
+pytest
+```
+
+for testing the requirements are google chrome, selenium and its webdriver maneger
+
+```
+# pip3 install selenium
+# pip3 install webdriver-manager
+```
+
 # feature 1
 
 ## Eu, como usuário, desejo entrar no site e ver uma lista de jogos para poder explorar todos os jogos.

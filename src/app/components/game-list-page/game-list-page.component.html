@@ -28,6 +28,7 @@
                 <img class="gameImg"src={{game.thumbnail}} alt="">
                 <h2 class="gameTitle"> {{game.title}}</h2>
                 <div class= "gamePlatform">{{game.platform}} </div>
+                <div class="date" title={{game.release_date}}></div>
             </a>
             <div class="buttonFavorite" (click)="unfavoriteGame(game)"> excluir de favoritos</div>
         </button>
@@ -36,13 +37,14 @@
        <br>
     <h1>Available Games!</h1>  
     <li class="listgames" *ngFor="let game of gameList">
-    <button class="gameButton">
-        <a routerLink="/detail/{{game.id}}">
-            <img class="gameImg"src={{game.thumbnail}} alt="">
-            <h2 class="gameTitle"> {{game.title}}</h2>
-            <div class= "gamePlatform">{{game.platform}} </div>
-        </a>
-        <div class="buttonFavorite" (click)="favoriteGame(game)">adicionar a favoritos</div>
-    </button>
+        <button class="gameButton">
+            <a routerLink="/detail/{{game.id}}">
+                <img class="gameImg"src={{game.thumbnail}} alt="">
+                <h2 class="gameTitle"> {{game.title}}</h2>
+                <div class= "gamePlatform">{{game.platform}} </div>
+                <div class="date" title={{game.release_date}}></div>
+            </a>
+            <div class="buttonFavorite" (click)="favoriteGame(game)">adicionar a favoritos</div>
+        </button>
     </li>
 </ul>
