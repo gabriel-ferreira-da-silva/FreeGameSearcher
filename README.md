@@ -1,4 +1,4 @@
-# SelecaoVlab
+# FreeGameSearcher
 
 The project was developed following the selection specifications [here](https://docs.google.com/document/d/1xh2g5AmTCCMetQWCTII8vbRC_8re6qdpYFARGMpRjIA/edit). All User stories were implementend without bugs or crash and should run smoothly on any machine with windows and angular installed. The freeGame API was used as specified and sugested by the creators. Some screenshots of the working project features are presented bellow.
 
